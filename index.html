@@ -32,20 +32,40 @@
                             <input class="tcompanyaddress" type="text" id="companyaddress" name="companyaddress" placeholder="Company's address">
                             <input class="tcity" type="text" id="city" name="city" placeholder="Your City">
                             <input class="tstate" type="text" id="state" name="state" placeholder="Your State">
-                            <input class="tcountry" type="text" id="coutnry" name="country" placeholder="Your Country">
+                            <input class="tcountry" type="text" id="country" name="country" placeholder="Your Country">
                             <input class="bill" type="text" id="bill" name="bill" placeholder="Bill To:">
                             <input class="ccompany" type="text" id="ccompany" name="ccompany" placeholder="Your client's company:">
-                            <input class="cgst" type="text" id="cgst" name="cgst" placeholder="clinet's GST">
-                            <input class="caddress" type="text" id="caddress" name="caddress" placeholder="caddress">
-                            <input class="ccity" type="text" id="ccity" name="ccity" placeholder="ccity">
-                            <input class="cstate" type="text" id="cstate" name="cstate" placeholder="cstate">
-                            <input class="ccountry" type="text" id="ccountry" name="ccountry" placeholder="ccountry">
-                            <input class="invoice" type="text" id="invoice" name="invoice" placeholder="invoice">
-                            <input class="invoicecontent" type="text" id="invoicecontent" name="invoicecontent" placeholder="invoicecontent">
-                            <input class="invoicedate" type="text" id="invoicedate" name="invoicedate" placeholder="invoicedate">
+                            <input class="cgstt" type="text" id="cgst" name="cgst" placeholder="Client's GST">
+                            <input class="caddress" type="text" id="caddress" name="caddress" placeholder="Client's Address">
+                            <input class="ccity" type="text" id="ccity" name="ccity" placeholder="Client's City">
+                            <input class="cstate" type="text" id="cstate" name="cstate" placeholder="Client's State">
+                            <input class="ccountry" type="text" id="ccountry" name="ccountry" placeholder="Client's Country">
+                            <input class="invoice" type="text" id="invoice" name="invoice" placeholder="Invoice Number">
+                            <input class="invoicecontent" type="text" id="invoicecontent" name="invoicecontent" placeholder="Invoice Content">
+                            <input class="invoicedate" type="text" id="invoicedate" name="invoicedate" placeholder="Invoice Date">
                             <input class="invoicedcontent" type="text" id="invoicedcontent" name="invoicedcontent" placeholder="28-feb-2024">
                             <input class="duedate" type="text" id="duedate" name="duedate" placeholder="Due Date">
                             <input class="duedatecontent" type="text" id="duedatecontent" name="duedatecontent" placeholder="28-feb-2024">
+                            <table class="table1 table">
+                                <thead>
+                                    <tr>
+                                        <th class="col-description">Item Description</th>
+                                        <th class="col-qty">Qty</th>
+                                        <th class="col-rate">Rate</th>
+                                        <th class="col-sgst">SGST</th>
+                                        <th class="col-cgst">CGST</th>
+                                        <th class="col-cess">Cess</th>
+                                        <th class="col-amount">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="invoiceitems">
+                                </tbody>
+                            </table>
+                            <button type="button" class="btn btn-primary" onclick="addInvoiceItem()">Add Item</button>
+                            <div class="form-group col-md-6 mt-5">
+                                <label class="totalAmount" for="totalAmount">Total Amount</label>
+                                <input type="text" class="form-control" id="totalAmount" readonly />
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -55,5 +75,6 @@
             </div>
         </div>
     </div>
+    <script src="assets/script.js"></script>
 </body>
 </html>

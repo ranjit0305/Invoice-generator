@@ -92,6 +92,200 @@ margin-left: -300px;
     position: absolute;
     margin-left: -300px;
 }
+.cgstt{
+    width:300px;
+    margin-top: 460px;
+    position: absolute;
+    margin-left: -300px;
+}
+.caddress{
+    width:300px;
+    margin-top: 490px;
+    position: absolute;
+    margin-left: -300px;
+    
+}
+.ccity{
+    width:300px;
+    margin-top: 490px;
+    position: absolute;
+    margin-left: -300px;
+    
+}
+.cstate
+{
+    width:300px;
+    margin-top: 490px;
+    position: absolute;
+    margin-left: -300px;
+   
+}
+.ccountry
+{
+    width:300px;
+    margin-top: 520px;
+    position: absolute;
+    margin-left: -300px;
+    
+}
+.invoice
+{
+    width:150px;
+    margin-top:400px;
+    margin-left: 50px;
+    position: absolute;
+}
+.invoicecontent
+{
+    width:150px;
+    margin-top:400px;
+    position: absolute;
+    margin-left: 220px;
+}
+.invoicedate
+{
+    width:150px;
+    margin-top:440px;
+    margin-left: 50px;
+    position: absolute;
+}
+.invoicedcontent{
+    width:150px;
+    margin-top:440px;
+    margin-left: 220px;
+    position: absolute;
+}
+.duedate
+{
+    width:150px;
+    margin-top:480px;
+    margin-left: 50px;
+    position: absolute;
+}
+.duedatecontent
+{
+    width:150px;
+    margin-top:480px;
+    margin-left: 220px;
+    position: absolute;
+}
+.table1{
+    width: 0px;
+    margin-left: 0px;
+    margin-top: 550px;
+}
+table,td,th
+{
+    border:1px solid black;
+}
+.tablerow
+{
+    width:1000px;
+}
+.btn-primary{
+    margin-left: -300px;
+    position: absolute;
+    margin-top: 50px;
+}
+
+.totalAmount
+{
+    margin-top: 100px;
+}
+.sign {
+    color: red;
+}
+.navbar {
+    color: #fff;
+}
+body {
+    height:2200px;
+    background-color: rgba(255, 255, 255, 0.679);
+}
+.f2 {
+    width: 750px;
+    height: 1500px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    position: relative;
+    top: 50px; /* Adjust the top and left values as needed */
+    left: 100px;
+}
+.upbox
+{
+    margin-top: 20px;
+    margin-left: -340px;
+    position: relative;
+}
+.t1{
+    width:250px;
+    margin-left: 80px;
+    height: 80px;
+    margin-top: 20px;
+    position: absolute;
+    font-size: 40px;
+}
+.tcompany{
+    margin-top: 120px;
+    position: absolute;
+    margin-left: -300px;
+    width:300px;
+}
+.tname
+{
+margin-top:155px ;
+position: absolute;
+margin-left: -300px;
+width:300px;
+}
+.tcompanygst
+{
+margin-top:190px ;
+position: absolute;
+margin-left: -300px;
+width:300px;
+}
+.tcompanyaddress
+{
+    width:300px;
+margin-top:225px ;
+position: absolute;
+margin-left: -300px;
+}
+.tcity
+{
+    width:300px;
+    margin-top: 260px;
+    position: absolute;
+    margin-left: -300px;
+}
+.tstate
+{
+    width:300px;
+    margin-top: 295px;
+    position: absolute;
+    margin-left: -300px;
+}
+.tcountry
+{
+    width:300px;
+    margin-top: 330px;
+    position: absolute;
+    margin-left: -300px;
+}
+.bill{
+    width:300px;
+    margin-top: 400px;
+    position: absolute;
+    margin-left: -300px;
+    font-weight: 900;
+}
+.ccompany{
+    width:300px;
+    margin-top: 430px;
+    position: absolute;
+    margin-left: -300px;
+}
 .cgst{
     width:300px;
     margin-top: 460px;
@@ -169,6 +363,67 @@ margin-left: -300px;
     margin-left: 220px;
     position: absolute;
 }
+.table1{
+    width: 0px;
+    margin-left: 0px;
+    margin-top: 550px;
+}
+table,td,th
+{
+    border:1px solid black;
+}
+.tablerow
+{
+    width:1000px;
+}
+.btn-primary{
+    margin-left: -300px;
+    position: absolute;
+    margin-top: 50px;
+}
+
+.totalAmount
+{
+    margin-top: 100px;
+}
+table.table1 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 600px; /* Adjust as needed */
+}
+
+table.table1 th,
+table.table1 td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+table.table1 .col-description {
+    width: 150px; 
+}
+
+table.table1 .col-qty,
+table.table1 .col-rate,
+table.table1 .col-sgst,
+table.table1 .col-cgst,
+table.table1 .col-cess,
+table.table1 .col-amount {
+    width: 80px; 
+}
+
+table.table1 .col-cgst {
+    width: 0px; 
+}
+
+@media (max-width: 768px) {
+    
+    .table1 {
+        margin-top: 550px; 
+    }
+}
+
+
 @media (max-width:1024px) {
     .f2{
         width: 940px;
@@ -181,6 +436,16 @@ margin-left: -300px;
     .t1{
         margin-left: 50px;
     }
+    .btn-primary{
+        margin-left: -450px;
+        margin-top: 50px;
+        position: absolute;
+    }
+    .r1,.r2,.r3,.r4
+{
+    width:180px;
+    border: none;
+}
 }
 @media (max-width:768px)
 {
@@ -191,6 +456,20 @@ margin-left: -300px;
     .upbox
     {
         margin-left: -350px;
+    }
+    .r1,.r2,.r3,.r4
+    {
+    border: none;
+    width: 130px;
+    }
+    .table1
+    {
+        margin-top: 550px;
+    }
+    .btn-primary{
+        margin-left: -300px;
+        margin-top: 50px;
+        position: absolute;
     }
 }
 @media (max-width:450px)
@@ -239,6 +518,15 @@ margin-left: -300px;
         margin-top:700px ;
         margin-left: -140px;
     }
+    .r1,.r2,.r3,.r4
+    {
+    border: none;
+    width: 60px;
+    }
+    .table1
+    {
+        margin-top: 750px;
+    }
 }
 @media (max-width:400px)
 {
@@ -255,6 +543,15 @@ margin-left: -300px;
         margin-left: -70px;
         width: 100px;
         height:50px;
+    }
+    .r1,.r2,.r3,.r4
+    {
+    border: none;
+    width: 45px;
+    }
+    .table1
+    {
+        margin-top: 750px;
     }
 }
 @media (max-width:350px)
@@ -279,7 +576,7 @@ margin-left: -300px;
         margin-top: 120px;
         width:200px;
     }
-    .tname,.tcity,.tcompanyaddress,.tcompanygst,.tcountry,.tname,.tstate,.bill,.ccity,.caddress,.ccompany,.ccountry,.cgst,.cstate
+    .tname,.tcity,.tcompanyaddress,.tcompanygst,.tcountry,.tname,.tstate,.bill,.ccity,.caddress,.ccompany,.ccountry,.cgstt,.cstate
     {
         width: 200px;
         margin-left: -140px;
@@ -314,4 +611,14 @@ margin-left: -300px;
         margin-left: 0px;
         width:100px;
     }
+    .r1,.r2,.r3,.r4
+    {
+    border: none;
+    width: 38px;
+    }
+    .table1
+    {
+        margin-top: 750px;
+    }
 }
+
