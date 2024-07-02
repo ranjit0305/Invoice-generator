@@ -286,12 +286,7 @@ margin-left: -300px;
     position: absolute;
     margin-left: -300px;
 }
-.cgst{
-    width:300px;
-    margin-top: 460px;
-    position: absolute;
-    margin-left: -300px;
-}
+
 .caddress{
     width:300px;
     margin-top: 490px;
@@ -415,7 +410,26 @@ table.table1 .col-amount {
 table.table1 .col-cgst {
     width: 0px; 
 }
-
+.Notes
+{
+margin-top:50px;
+width:100%;
+}
+.Notescontent
+{
+    margin-top: 30px;
+    width:100%;
+}
+.TandC
+{
+width:100%;
+margin-top: 20px;
+}
+.TandCcontent
+{
+    width:100%;
+margin-top: 20px;
+}
 @media (max-width: 768px) {
     
     .table1 {
