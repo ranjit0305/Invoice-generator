@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7+5hb7Md27jT8qIA6LPDZBdyO5wvGZ3P8Ifkfsh4" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="assets/script.js" defer></script>
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
@@ -26,7 +29,7 @@
                 <div class="f2">
                     <div class="container-sm">
                         <form>
-                            <input class="upbox" type="file" name="fileupload" accept="image/*" />
+                            <input class="upbox" type="file" id="logoUpload" name="fileupload" accept="image/*" />
                             <input class="t1" type="text" id="taxinvoice" name="taxinvoice" placeholder="TAX INVOICE">
                             <input class="tcompany" type="text" id="company" name="company" placeholder="Your Company">
                             <input class="tname" type="text" id="name" name="name" placeholder="Your name">
@@ -72,7 +75,7 @@
                             <input class="Notescontent" type="text" id="notescontent" name="notescontent" placeholder="It was great doing business with you.">
                             <input class="TandC" type="text" id="TandC" name="TandC" placeholder="Terms & Condition">
                             <input class="TandCcontent" type="text" id="TandCcontent" name="TandCcontent" placeholder="Please make the payment by the due date.">
-                            <button type="button" class="btn btn-secondary" onclick="printInvoice()">Print Invoice</button>
+                            <button type="button" class="btn btn-secondary" onclick="generatePDF()">Download Invoice</button>
                         </form>
                     </div>
                 </div>
@@ -82,6 +85,5 @@
             </div>
         </div>
     </div>
-    <script src="assets/script.js"></script>
 </body>
 </html>

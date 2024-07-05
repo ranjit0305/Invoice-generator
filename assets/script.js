@@ -43,75 +43,93 @@ function updateTotalAmount() {
     document.getElementById('totalAmount').value = total.toFixed(2);
 }
 
-function printInvoice() {
-    const taxinvoice = $("#taxinvoice").val();
-    const invoiceno = $("#invoice").val();
-    const invoicedate = $("#invoicedate").val();
-    const duedate = $("#duedate").val();
+function generatePDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
 
-    const items = [];
-    $("tr[id^='itemRow']").each(function () {
-        const description = $(this).find("td:eq(0) input").val();
-        const qty = $(this).find("td:eq(1) input").val();
-        const rate = $(this).find("td:eq(2) input").val();
-        const cgst = $(this).find("td:eq(3) input").val();
-        const sgst = $(this).find("td:eq(4) input").val();
-        const cess = $(this).find("td:eq(5) input").val();
-        const amount = $(this).find("td:eq(6) input").val();
+    const taxinvoice = document.getElementById("taxinvoice").value;
+    const invoiceno = document.getElementById("invoice").value;
+    const invoicedate = document.getElementById("invoicedate").value;
+    const invoicedcontent=document.getElementById("invoicedcontent").value
+    const duedate = document.getElementById("duedate").value;
+    const totalAmount = document.getElementById("totalAmount").value;
+    const notes = document.getElementById("notes").value;
+    const notesContent = document.getElementById("notescontent").value;
+    const tandc = document.getElementById("TandC").value;
+    const tandcContent = document.getElementById("TandCcontent").value;
 
-        items.push({
-            description: description,
-            qty: qty,
-            rate: rate,
-            cgst: cgst,
-            sgst: sgst,
-            cess: cess,
-            amount: amount,
+    // Check if mandatory fields are filled
+    if (!taxinvoice || !invoiceno || !invoicedate || !duedate || !totalAmount) {
+        alert("Please fill in all mandatory fields.");
+        return;
+    }
+
+    function generatePDFContent() {
+        doc.setFontSize(20);
+        doc.text(taxinvoice, 180, 20);
+
+        doc.setFontSize(12);
+        doc.text(`Invoice No: ${invoiceno}`, 10, 60);
+        doc.text(`Invoice Date: ${invoicedcontent}`, 10, 70);
+        doc.text(`Due Date: ${duedate}`, 10, 80);
+
+        const startY = 90;
+        let currentY = startY;
+
+        doc.setFontSize(10);
+        doc.text("Item Description", 10, currentY);
+        doc.text("Qty", 60, currentY);
+        doc.text("Rate", 80, currentY);
+        doc.text("SGST", 100, currentY);
+        doc.text("CGST", 120, currentY);
+        doc.text("Cess", 140, currentY);
+        doc.text("Amount", 160, currentY);
+        currentY += 10;
+
+        document.querySelectorAll("tr[id^='itemRow']").forEach(function (row) {
+            const description = row.querySelector("td input[type='text']").value;
+            const qty = row.querySelectorAll("td input")[1].value;
+            const rate = row.querySelectorAll("td input")[2].value;
+            const sgst = row.querySelectorAll("td input")[3].value;
+            const cgst = row.querySelectorAll("td input")[4].value;
+            const cess = row.querySelectorAll("td input")[5].value;
+            const amount = row.querySelectorAll("td input")[6].value;
+
+            doc.text(description, 10, currentY);
+            doc.text(qty, 60, currentY);
+            doc.text(rate, 80, currentY);
+            doc.text(sgst, 100, currentY);
+            doc.text(cgst, 120, currentY);
+            doc.text(cess, 140, currentY);
+            doc.text(amount, 160, currentY);
+            currentY += 10;
         });
-    });
+        doc.setFontSize(12);
+        doc.text(`Total Amount: ${totalAmount}`, 10, currentY + 10);
+        currentY += 20;
+        doc.setFontSize(10);
+        doc.text(notes, 10, currentY);
+        currentY += 10;
+        doc.text(notes, 10, currentY);
+        currentY += 10;
+        doc.text(tandc, 10, currentY);
+        currentY += 10;
+        doc.text(tandcContent, 10, currentY);
+        doc.save('invoice.pdf');
+    }
 
-    const totalAmount = $("#totalAmount").val();
-
-    let invoiceContent = `
-        <h1>${taxinvoice}</h1>
-        <p>Invoice No: ${invoiceno}</p>
-        <p>Invoice Date: ${invoicedate}</p>
-        <p>Due Date: ${duedate}</p>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Description</th>
-                    <th>Qty</th>
-                    <th>Rate</th>
-                    <th>CGST</th>
-                    <th>SGST</th>
-                    <th>Cess</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>
-            <tbody>`;
-
-    items.forEach(item => {
-        invoiceContent += `
-                <tr>
-                    <td>${item.description}</td>
-                    <td>${item.qty}</td>
-                    <td>${item.rate}</td>
-                    <td>${item.cgst}</td>
-                    <td>${item.sgst}</td>
-                    <td>${item.cess}</td>
-                    <td>${item.amount}</td>
-                </tr>`;
-    });
-
-    invoiceContent += `
-            </tbody>
-        </table>
-        <p>Total Amount: ${totalAmount}</p>
-    `;
-
-    const newWindow = window.open('', '_blank', 'width=800,height=600');
-    newWindow.document.write(invoiceContent);
-    newWindow.document.close(); // Ensure the content is written before printing
-    newWindow.print();
+    // Add logo if uploaded
+    const logoUpload = document.getElementById('logoUpload').files[0];
+    if (logoUpload) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const imgData = e.target.result;
+            doc.addImage(imgData, 'PNG', 10, 10, 50, 30);
+            generatePDFContent();
+        };
+        reader.readAsDataURL(logoUpload);
+    } 
+    else {
+        generatePDFContent();
+    }
 }
