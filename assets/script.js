@@ -72,7 +72,7 @@ function generatePDF() {
     const tandc = document.getElementById("TandC").value;
     const tandcContent = document.getElementById("TandCcontent").value;
 
-    // Check if mandatory fields are filled
+
     if (!taxinvoice || !invoiceno || !invoicedate || !duedate || !totalAmount) {
         alert("Please fill in all mandatory fields.");
         return;
@@ -80,7 +80,7 @@ function generatePDF() {
 
     function generatePDFContent() {
         doc.setFontSize(20);
-        doc.text(taxinvoice, 180, 20);
+        doc.text(taxinvoice, 140, 20);
 
         doc.setFontSize(12);
         doc.text(`Invoice No: ${invoiceno}`, 10, 60);
@@ -132,7 +132,6 @@ function generatePDF() {
         doc.save('invoice.pdf');
     }
 
-    // Add logo if uploaded
     const logoUpload = document.getElementById('logoUpload').files[0];
     if (logoUpload) {
         const reader = new FileReader();

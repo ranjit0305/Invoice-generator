@@ -199,7 +199,7 @@ body {
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     position: relative;
-    top: 50px; /* Adjust the top and left values as needed */
+    top: 50px; 
     left: 100px;
 }
 .upbox
@@ -398,12 +398,12 @@ table,td,th
 }
 .table-container {
     width: 100%;
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    overflow-x: hidden;
 }
 table.table1 {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 600px; /* Adjust as needed */
+    margin-top: 600px; 
 }
 
 table.table1 th,
@@ -608,7 +608,7 @@ margin-top: 20px;
     table.table1 {
         width: 200px;
         margin-left: 0px;
-        margin-top: 750px; /* Adjust as needed */
+        margin-top: 750px;
     }
     th.col-description
     {
