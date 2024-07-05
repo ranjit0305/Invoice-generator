@@ -67,9 +67,17 @@
                                 </tbody>
                             </table>
                             <button type="button" class="btn btn-primary" onclick="addInvoiceItem()">Add Item</button>
-                            <div class="form-group col-md-6 mt-5">
+                            <div class="form-group col-md-6 mt-3">
+                                <label class="sgstAmount" for="sgstAmount">Total SGST</label>
+                                <input type="text" class="form-control sgstbox" id="sgstAmount" readonly />
+                            </div>
+                            <div class="form-group col-md-6 mt-3">
+                                <label class="cgstAmount" for="cgstAmount">Total CGST</label>
+                                <input type="text" class="form-control cgstbox" id="cgstAmount" readonly />
+                            </div>
+                            <div class="form-group col-md-6 mt-3">
                                 <label class="totalAmount" for="totalAmount">Total Amount</label>
-                                <input type="text" class="form-control" id="totalAmount" readonly />
+                                <input type="text" class="form-control totalamountbox" id="totalAmount" readonly />
                             </div>
                             <input class="Notes" type="text" id="notes" name="notes" placeholder="Notes">
                             <input class="Notescontent" type="text" id="notescontent" name="notescontent" placeholder="It was great doing business with you.">
@@ -79,9 +87,6 @@
                         </form>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6">
-                Column
             </div>
         </div>
     </div>

@@ -36,12 +36,26 @@ function calculateAmount(rowId) {
 
 function updateTotalAmount() {
     let total = 0;
-    document.querySelectorAll('.amount').forEach(amountRow => {
-        total += parseFloat(amountRow.value) || 0;
+    let totalSGST = 0;
+    let totalCGST = 0;
+
+    document.querySelectorAll("tr[id^='itemRow']").forEach(function (row) {
+        const qty = parseFloat(row.querySelectorAll("td input")[1].value) || 0;
+        const rate = parseFloat(row.querySelectorAll("td input")[2].value) || 0;
+        const sgst = parseFloat(row.querySelectorAll("td input")[3].value) || 0;
+        const cgst = parseFloat(row.querySelectorAll("td input")[4].value) || 0;
+        const amount = parseFloat(row.querySelectorAll("td input")[6].value) || 0;
+
+        total += amount;
+        totalSGST += qty * sgst;
+        totalCGST += qty * cgst;
     });
 
     document.getElementById('totalAmount').value = total.toFixed(2);
+    document.getElementById('sgstAmount').value = totalSGST.toFixed(2);
+    document.getElementById('cgstAmount').value = totalCGST.toFixed(2);
 }
+
 
 function generatePDF() {
     const { jsPDF } = window.jspdf;

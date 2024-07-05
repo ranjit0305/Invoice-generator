@@ -1,22 +1,4 @@
-.sign {
-    color: red;
-}
-.navbar {
-    color: #fff;
-}
-body {
-    height:2200px;
-    background-color: rgba(255, 255, 255, 0.679);
-}
-.f2 {
-    width: 750px;
-    height: 1500px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid black;
-    position: relative;
-    top: 50px; /* Adjust the top and left values as needed */
-    left: 100px;
-}
+
 .upbox
 {
     margin-top: 20px;
@@ -187,7 +169,16 @@ table,td,th
     position: absolute;
     margin-top: 50px;
 }
+.cgstAmount
+{
+    margin-top: 100px;
+    margin-left: 100px;
+}
 
+.sgstAmount
+{
+    margin-top: 100px;
+}
 .totalAmount
 {
     margin-top: 100px;
@@ -204,7 +195,7 @@ body {
 }
 .f2 {
     width: 750px;
-    height: 1500px;
+    height: 1800px;
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     position: relative;
@@ -375,10 +366,39 @@ table,td,th
     position: absolute;
     margin-top: 50px;
 }
-
+.sgstAmount
+{
+    margin-left:380px;
+    margin-top: 100px;
+}
+.cgstAmount
+{
+    margin-left:380px;
+    margin-top: 0px;
+}
+.cgstbox
+{
+    width: 200px;
+    margin-left: 500px;
+}
+.sgstbox
+{
+    width: 200px;
+    margin-left: 500px;
+}
 .totalAmount
 {
-    margin-top: 100px;
+    margin-top: 0px;
+    margin-left: 380px;
+}
+.totalamountbox
+{
+    width: 200px;
+    margin-left: 500px;
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 table.table1 {
     width: 100%;
@@ -406,9 +426,6 @@ table.table1 .col-amount {
     width: 80px; 
 }
 
-table.table1 .col-cgst {
-    width: 0px; 
-}
 .Notes
 {
 margin-top:50px;
@@ -447,17 +464,42 @@ margin-top: 20px;
         margin-left: -550px;
     }
     .t1{
-        margin-left: 50px;
+        margin-left: 250px;
     }
     .btn-primary{
         margin-left: -450px;
         margin-top: 50px;
         position: absolute;
     }
+    .btn-secondary
+    {
+        margin-top: 20px;
+    }
     .r1,.r2,.r3,.r4
 {
     width:180px;
     border: none;
+}
+.cgstbox{
+    margin-left: 650px;
+}
+.sgstbox{
+    margin-left: 650px;
+}
+.totalamountbox{
+    margin-left: 650px;
+}
+.sgstAmount
+{
+    margin-left: 550px;
+}
+.cgstAmount
+{
+    margin-left: 550px;
+}
+.totalAmount
+{
+    margin-left: 550px;
 }
 }
 @media (max-width:768px)
@@ -465,6 +507,10 @@ margin-top: 20px;
     .f2{
         margin-left: -100px;
         width: 700px;
+    }
+    .t1
+    {
+        margin-left: 100px;
     }
     .upbox
     {
@@ -484,6 +530,28 @@ margin-top: 20px;
         margin-top: 50px;
         position: absolute;
     }
+    .cgstbox{
+        margin-left: 450px;
+    }
+    .sgstbox{
+        margin-left: 450px;
+    }
+    .totalamountbox{
+        margin-left: 450px;
+    }
+    .sgstAmount
+    {
+        margin-left: 350px;
+    }
+    .cgstAmount
+    {
+        margin-left: 350px;
+    }
+    .totalAmount
+    {
+        margin-left: 350px;
+    }
+    
 }
 @media (max-width:450px)
 {
@@ -501,10 +569,11 @@ margin-top: 20px;
         width: 100px;
         height:50px;
     }
+    
     .invoice
     {
         margin-top:600px ;
-        margin-left: -300px;
+        margin-left: -280px;
     }
     .invoicecontent
     {
@@ -514,7 +583,7 @@ margin-top: 20px;
     .invoicedate
     {
         margin-top:650px ;
-        margin-left: -300px;
+        margin-left: -280px;
     }
     .invoicedcontent
     {
@@ -524,7 +593,7 @@ margin-top: 20px;
     .duedate
     {
         margin-top:700px ;
-        margin-left: -300px;
+        margin-left: -280px;
     }
     .duedatecontent
     {
@@ -536,9 +605,39 @@ margin-top: 20px;
     border: none;
     width: 60px;
     }
-    .table1
+    table.table1 {
+        width: 200px;
+        margin-left: 0px;
+        margin-top: 750px; /* Adjust as needed */
+    }
+    th.col-description
     {
-        margin-top: 750px;
+        width:50px;
+    }
+    .cgstbox{
+        margin-left: 150px;
+    }
+    .sgstbox{
+        margin-left: 150px;
+    }
+    .totalamountbox{
+        margin-left: 150px;
+    }
+    .sgstAmount
+    {
+        margin-left: 100px;
+    }
+    .cgstAmount
+    {
+        margin-left: 100px;
+    }
+    .totalAmount
+    {
+        margin-left: 100px;
+    }
+    .btn-primary
+    {
+        margin-left: -190px;
     }
 }
 @media (max-width:400px)
@@ -562,9 +661,35 @@ margin-top: 20px;
     border: none;
     width: 45px;
     }
-    .table1
+    table.table1
     {
         margin-top: 750px;
+        width: 150px;
+    }
+    .cgstbox{
+        margin-left: 50px;
+    }
+    .sgstbox{
+        margin-left: 50px;
+    }
+    .totalamountbox{
+        margin-left: 50px;
+    }
+    .sgstAmount
+    {
+        margin-left: 100px;
+    }
+    .cgstAmount
+    {
+        margin-left: 100px;
+    }
+    .totalAmount
+    {
+        margin-left: 100px;
+    }
+    .btn-primary
+    {
+        margin-left: -140px;
     }
 }
 @media (max-width:350px)
