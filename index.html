@@ -51,21 +51,24 @@
                             <input class="invoicedcontent" type="text" id="invoicedcontent" name="invoicedcontent" placeholder="28-feb-2024">
                             <input class="duedate" type="text" id="duedate" name="duedate" placeholder="Due Date">
                             <input class="duedatecontent" type="text" id="duedatecontent" name="duedatecontent" placeholder="28-feb-2024">
-                            <table class="table1 table">
-                                <thead>
-                                    <tr>
-                                        <th class="col-description">Item Description</th>
-                                        <th class="col-qty">Qty</th>
-                                        <th class="col-rate">Rate</th>
-                                        <th class="col-sgst">SGST</th>
-                                        <th class="col-cgst">CGST</th>
-                                        <th class="col-cess">Cess</th>
-                                        <th class="col-amount">Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="invoiceitems">
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table1 table">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-description">Item Description</th>
+                                            <th class="col-qty">Qty</th>
+                                            <th class="col-rate">Rate</th>
+                                            <th class="col-sgst">SGST</th>
+                                            <th class="col-cgst">CGST</th>
+                                            <th class="col-cess">Cess</th>
+                                            <th class="col-amount">Amount</th>
+                                            <th class="col-action">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="invoiceitems">
+                                    </tbody>
+                                </table>
+                            </div>
                             <button type="button" class="btn btn-primary" onclick="addInvoiceItem()">Add Item</button>
                             <div class="form-group col-md-6 mt-3">
                                 <label class="sgstAmount" for="sgstAmount">Total SGST</label>
@@ -92,3 +95,10 @@
     </div>
 </body>
 </html>
+
+
+
+
+
+
+

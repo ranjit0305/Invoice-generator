@@ -1,3 +1,13 @@
+.container-sm {
+    overflow-x: auto;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling:touch;
+}
 body {
     background: #333333;
     height: 2200px;
@@ -428,7 +438,8 @@ table.table1 .col-rate,
 table.table1 .col-sgst,
 table.table1 .col-cgst,
 table.table1 .col-cess,
-table.table1 .col-amount {
+table.table1 .col-amount,
+table.table1 .col-action {
     width: 80px; 
     background-color: black;
     color: #fff;
@@ -612,14 +623,9 @@ margin-top: 20px;
         margin-top:700px ;
         margin-left: -140px;
     }
-    .r1,.r2,.r3,.r4
-    {
-    border: none;
-    width: 60px;
-    }
     table.table1 {
         width: 200px;
-        margin-left: 0px;
+        margin-left: -10px;
         margin-top: 750px;
     }
     th.col-description

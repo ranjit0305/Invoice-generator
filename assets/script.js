@@ -15,9 +15,15 @@ function addInvoiceItem() {
         <td><input type="number" class="form-control cgst" placeholder="CGST" oninput="calculateAmount(${itemCounter})"></td>
         <td><input type="number" class="form-control cess" placeholder="Cess" oninput="calculateAmount(${itemCounter})"></td>
         <td><input type="number" class="form-control amount" placeholder="Amount" readonly></td>
+        <td><button type="button" class="btn btn-danger" onclick="removeInvoiceItem(${itemCounter})">Remove</button></td>
     `;
 
     invoiceItems.appendChild(newItemRow);
+}
+
+function removeInvoiceItem(rowId) {
+    document.getElementById('itemRow' + rowId).remove();
+    updateTotalAmount();
 }
 
 function calculateAmount(rowId) {
