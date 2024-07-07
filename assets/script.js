@@ -56,7 +56,6 @@ function updateTotalAmount() {
     document.getElementById('cgstAmount').value = totalCGST.toFixed(2);
 }
 
-
 function generatePDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
@@ -64,14 +63,15 @@ function generatePDF() {
     const taxinvoice = document.getElementById("taxinvoice").value;
     const invoiceno = document.getElementById("invoice").value;
     const invoicedate = document.getElementById("invoicedate").value;
-    const invoicedcontent=document.getElementById("invoicedcontent").value
+    const invoicedcontent = document.getElementById("invoicedcontent").value
     const duedate = document.getElementById("duedate").value;
     const totalAmount = document.getElementById("totalAmount").value;
     const notes = document.getElementById("notes").value;
     const notesContent = document.getElementById("notescontent").value;
     const tandc = document.getElementById("TandC").value;
     const tandcContent = document.getElementById("TandCcontent").value;
-
+    const totalCGST = document.getElementById("cgstAmount").value;
+    const totalSGST = document.getElementById("sgstAmount").value;
 
     if (!taxinvoice || !invoiceno || !invoicedate || !duedate || !totalAmount) {
         alert("Please fill in all mandatory fields.");
@@ -118,17 +118,25 @@ function generatePDF() {
             doc.text(amount, 160, currentY);
             currentY += 10;
         });
+
         doc.setFontSize(12);
-        doc.text(`Total Amount: ${totalAmount}`, 10, currentY + 10);
+        currentY += 10;
+        doc.text(`CGST: ${totalCGST}`, 10, currentY);
+        currentY += 10;
+        doc.text(`SGST: ${totalSGST}`, 10, currentY);
+        currentY += 10;
+        doc.text(`Total Amount: ${totalAmount}`, 10, currentY);
         currentY += 20;
+        
         doc.setFontSize(10);
         doc.text(notes, 10, currentY);
         currentY += 10;
-        doc.text(notes, 10, currentY);
+        doc.text(notesContent, 10, currentY);
         currentY += 10;
         doc.text(tandc, 10, currentY);
         currentY += 10;
         doc.text(tandcContent, 10, currentY);
+
         doc.save('invoice.pdf');
     }
 
