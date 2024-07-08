@@ -78,6 +78,19 @@ function generatePDF() {
     const tandcContent = document.getElementById("TandCcontent").value;
     const totalCGST = document.getElementById("cgstAmount").value;
     const totalSGST = document.getElementById("sgstAmount").value;
+    const tcompany = document.getElementById("company").value;
+    const tname = document.getElementById("name").value;
+    const tcompanygst = document.getElementById("companygst").value;
+    const tcity = document.getElementById("city").value;
+    const tstate = document.getElementById("state").value;
+    const tcountry = document.getElementById("country").value;
+    const bill = document.getElementById("bill").value;
+    const ccompany = document.getElementById("ccompany").value;
+    const cgstt = document.getElementById("cgstt").value;
+    const caddress = document.getElementById("caddress").value;
+    const ccity = document.getElementById("ccity").value;
+    const cstate = document.getElementById("cstate").value;
+    const ccountry = document.getElementById("ccountry").value;
 
     if (!taxinvoice || !invoiceno || !invoicedate || !duedate || !totalAmount) {
         alert("Please fill in all mandatory fields.");
@@ -85,15 +98,28 @@ function generatePDF() {
     }
 
     function generatePDFContent() {
-        doc.setFontSize(20);
+        doc.setFontSize(15);
         doc.text(taxinvoice, 140, 20);
 
         doc.setFontSize(12);
         doc.text(`Invoice No: ${invoiceno}`, 10, 60);
-        doc.text(`Invoice Date: ${invoicedcontent}`, 10, 70);
+        doc.text(`${invoicedate}: ${invoicedcontent}`, 10, 70);
         doc.text(`Due Date: ${duedate}`, 10, 80);
+        doc.text(`${tcompany}`,10,90);
+        doc.text(`${tname}`,10,100);
+        doc.text(`${tcompanygst}`,10,110);
+        doc.text(`${tcity}`,10,120);
+        doc.text(`${tstate}`,10,130);
+        doc.text(`${tcountry}`,10,140);
+        doc.text(`${bill}`,10,160);
+        doc.text(`${ccompany}`,10,170);
+        doc.text(`${cgstt}`,10,180);
+        doc.text(`${caddress}`,10,190);
+        doc.text(`${ccity}`,10,200);
+        doc.text(`${cstate}`,10,210);
+        doc.text(`${ccountry}`,10,220);
 
-        const startY = 90;
+        const startY = 230;
         let currentY = startY;
 
         doc.setFontSize(10);
@@ -107,14 +133,21 @@ function generatePDF() {
         currentY += 10;
 
         document.querySelectorAll("tr[id^='itemRow']").forEach(function (row) {
-            const description = row.querySelector("td input[type='text']").value;
-            const qty = row.querySelectorAll("td input")[1].value;
-            const rate = row.querySelectorAll("td input")[2].value;
-            const sgst = row.querySelectorAll("td input")[3].value;
-            const cgst = row.querySelectorAll("td input")[4].value;
-            const cess = row.querySelectorAll("td input")[5].value;
-            const amount = row.querySelectorAll("td input")[6].value;
+            const inputs = row.querySelectorAll("td input");
+        
+            const description = inputs[0].value;
+            const qty = inputs[1].value;
+            const rate = inputs[2].value;
+            const sgst = inputs[3].value;
+            const cgst = inputs[4].value;
+            const cess = inputs[5].value;
+            const amount = inputs[6].value;
 
+            if (currentY > 270) {
+                doc.addPage();
+                currentY = 10;
+            }
+        
             doc.text(description, 10, currentY);
             doc.text(qty, 60, currentY);
             doc.text(rate, 80, currentY);
@@ -123,7 +156,12 @@ function generatePDF() {
             doc.text(cess, 140, currentY);
             doc.text(amount, 160, currentY);
             currentY += 10;
-        });
+        });        
+
+        if (currentY > 270) {
+            doc.addPage();
+            currentY = 10;
+        }
 
         doc.setFontSize(12);
         currentY += 10;
@@ -134,6 +172,11 @@ function generatePDF() {
         doc.text(`Total Amount: ${totalAmount}`, 10, currentY);
         currentY += 20;
         
+        if (currentY > 270) {
+            doc.addPage();
+            currentY = 10;
+        }
+
         doc.setFontSize(10);
         doc.text(notes, 10, currentY);
         currentY += 10;
@@ -155,8 +198,7 @@ function generatePDF() {
             generatePDFContent();
         };
         reader.readAsDataURL(logoUpload);
-    } 
-    else {
+    } else {
         generatePDFContent();
     }
 }
