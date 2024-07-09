@@ -1,7 +1,7 @@
 #Invoice Generator
 This project is a simple web-based application to create and generate invoices. The application allows you to add invoice items, calculate the total amount including taxes, and generate a PDF of the invoice. You can also add company details, customer details, and additional notes.
 
-#Hosted Link: https://vercel.com/ranjit0305s-projects/invoice-generator/64ZZacNdEuVo5dhRwhdhX77dWi3n
+#Hosted Link: https://invoice-generator-ruddy-seven.vercel.app/
 
 #Features
 Add multiple invoice items
