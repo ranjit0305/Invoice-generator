@@ -71,6 +71,7 @@ function generatePDF() {
     const invoicedate = document.getElementById("invoicedate").value;
     const invoicedcontent = document.getElementById("invoicedcontent").value
     const duedate = document.getElementById("duedate").value;
+    const duedatecontent = document.getElementById("duedatecontent").value;
     const totalAmount = document.getElementById("totalAmount").value;
     const notes = document.getElementById("notes").value;
     const notesContent = document.getElementById("notescontent").value;
@@ -104,7 +105,7 @@ function generatePDF() {
         doc.setFontSize(12);
         doc.text(`Invoice No: ${invoiceno}`, 10, 60);
         doc.text(`${invoicedate}: ${invoicedcontent}`, 10, 70);
-        doc.text(`Due Date: ${duedate}`, 10, 80);
+        doc.text(`${duedate}: ${duedatecontent}`, 10, 80);
         doc.text(`${tcompany}`,10,90);
         doc.text(`${tname}`,10,100);
         doc.text(`${tcompanygst}`,10,110);

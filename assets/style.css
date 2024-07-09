@@ -1,3 +1,4 @@
+
 .container-sm {
     overflow-x: auto;
 }
@@ -9,8 +10,9 @@
     -webkit-overflow-scrolling:touch;
 }
 body {
-    background: #333333;
+
     height: 2200px;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(255, 255, 255, 0.679);
 }
 .upbox
@@ -205,13 +207,14 @@ table,td,th
 }
 body {
     height:2200px;
-    background-color: rgba(255, 255, 255, 0.679);
+    background-color: #d2d2d25d;
 }
 .f2 {
     width: 750px;
     height: 1800px;
     background-color: rgb(255, 255, 255);
-    border: 1px solid black;
+    border-radius: 15px;
+    border: 0px solid black;
     position: relative;
     top: 50px; 
     left: 100px;
