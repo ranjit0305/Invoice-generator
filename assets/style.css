@@ -2,7 +2,6 @@
 .container-sm {
     overflow-x: auto;
 }
-
 .table-responsive {
     display: block;
     width: 100%;
@@ -206,18 +205,20 @@ table,td,th
     color: #fff;
 }
 body {
-    height:2200px;
+    height:auto;
     background-color: #d2d2d25d;
 }
 .f2 {
     width: 750px;
-    height: 1800px;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     border: 0px solid black;
     position: relative;
     top: 50px; 
     left: 100px;
+    display: block;
+    height: auto; 
+    padding: 10px;
 }
 .upbox
 {
