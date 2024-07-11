@@ -33,7 +33,7 @@ function calculateAmount(rowId) {
     const sgst = parseFloat(document.querySelector(`#itemRow${rowId} .sgst`).value) || 0;
     const cess = parseFloat(document.querySelector(`#itemRow${rowId} .cess`).value) || 0;
 
-    const amount = qty * rate + (qty * cgst) + (qty * sgst) + (qty * cess);
+    const amount = qty * rate + (qty * rate*(cgst/100)) + (qty * rate * (sgst/100)) + (qty * rate *(cess/100));
     const amountRow = document.querySelector(`#itemRow${rowId} .amount`);
     amountRow.value = amount.toFixed(2);
 
@@ -53,8 +53,10 @@ function updateTotalAmount() {
         const amount = parseFloat(row.querySelectorAll("td input")[6].value) || 0;
 
         total += amount;
-        totalSGST += qty * sgst;
-        totalCGST += qty * cgst;
+        totalSGST += qty * (rate *sgst/100);
+        totalCGST += qty * (rate * cgst/100
+            
+        );
     });
 
     document.getElementById('totalAmount').value = total.toFixed(2);
