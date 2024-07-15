@@ -5,173 +5,151 @@
     display: block;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling: touch;
 }
 body {
-
     height: 2200px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(255, 255, 255, 0.679);
+    background-color: rgb(255, 255, 255);
 }
-.upbox
-{
+.upbox {
     margin-top: 20px;
     margin-left: -540px;
     position: relative;
 }
-
-.tcompany{
+.tcompany {
     margin-top: 120px;
     position: absolute;
     margin-left: -300px;
-    width:300px;
+    width: 300px;
 }
-.tname
-{
-margin-top:155px ;
-position: absolute;
-margin-left: -300px;
-width:300px;
+.tname {
+    margin-top: 155px;
+    position: absolute;
+    margin-left: -300px;
+    width: 300px;
 }
-.tcompanygst
-{
-margin-top:190px ;
-position: absolute;
-margin-left: -300px;
-width:300px;
+.tcompanygst {
+    margin-top: 190px;
+    position: absolute;
+    margin-left: -300px;
+    width: 300px;
 }
-.tcompanyaddress
-{
-    width:300px;
-margin-top:225px ;
-position: absolute;
-margin-left: -300px;
+.tcompanyaddress {
+    width: 300px;
+    margin-top: 225px;
+    position: absolute;
+    margin-left: -300px;
 }
-.tcity
-{
-    width:300px;
+.tcity {
+    width: 300px;
     margin-top: 260px;
     position: absolute;
     margin-left: -300px;
 }
-.tstate
-{
-    width:300px;
+.tstate {
+    width: 300px;
     margin-top: 295px;
     position: absolute;
     margin-left: -300px;
 }
-.tcountry
-{
-    width:300px;
+.tcountry {
+    width: 300px;
     margin-top: 330px;
     position: absolute;
     margin-left: -300px;
 }
-.bill{
-    width:300px;
+.bill {
+    width: 300px;
     margin-top: 400px;
     position: absolute;
     margin-left: -300px;
     font-weight: 900;
 }
-.ccompany{
-    width:300px;
+.ccompany {
+    width: 300px;
     margin-top: 430px;
     position: absolute;
     margin-left: -300px;
 }
-.cgstt{
-    width:300px;
+.cgstt {
+    width: 300px;
     margin-top: 460px;
     position: absolute;
     margin-left: -300px;
 }
-.caddress{
-    width:300px;
+.caddress {
+    width: 300px;
     margin-top: 490px;
     position: absolute;
     margin-left: -300px;
-    
 }
-.ccity{
-    width:300px;
+.ccity {
+    width: 300px;
     margin-top: 490px;
     position: absolute;
     margin-left: -300px;
-    
 }
-.cstate
-{
-    width:300px;
+.cstate {
+    width: 300px;
     margin-top: 490px;
     position: absolute;
     margin-left: -300px;
-   
 }
-.ccountry
-{
-    width:300px;
+.ccountry {
+    width: 300px;
     margin-top: 520px;
     position: absolute;
     margin-left: -300px;
-    
 }
-.invoice
-{
-    width:150px;
-    margin-top:400px;
+.invoice {
+    width: 150px;
+    margin-top: 400px;
     margin-left: 150px;
     position: absolute;
 }
-.invoicecontent
-{
-    width:150px;
-    margin-top:400px;
+.invoicecontent {
+    width: 150px;
+    margin-top: 400px;
     position: absolute;
     margin-left: 310px;
 }
-.invoicedate
-{
-    width:150px;
-    margin-top:440px;
+.invoicedate {
+    width: 150px;
+    margin-top: 440px;
     margin-left: 150px;
     position: absolute;
 }
-.invoicedcontent{
-    width:150px;
-    margin-top:440px;
+.invoicedcontent {
+    width: 150px;
+    margin-top: 440px;
     margin-left: 310px;
     position: absolute;
 }
-.duedate
-{
-    width:150px;
-    margin-top:480px;
+.duedate {
+    width: 150px;
+    margin-top: 480px;
     margin-left: 150px;
     position: absolute;
 }
-.duedatecontent
-{
-    width:150px;
-    margin-top:480px;
+.duedatecontent {
+    width: 150px;
+    margin-top: 480px;
     margin-left: 310px;
     position: absolute;
 }
-.table1{
+.table1 {
     width: 0px;
     margin-left: 0px;
     margin-top: 550px;
 }
-table,td,th
-{
-    border:1px solid black;
+table, td, th {
+    border: 1px solid black;
 }
-.tablerow
-{
-    width:1000px;
+.tablerow {
+    width: 1000px;
 }
-.btn-primary{
+.btn-primary {
     margin-left: -450px;
     position: absolute;
     margin-top: 50px;
@@ -183,8 +161,8 @@ table,td,th
     color: #fff;
 }
 body {
-    height:auto;
-    background-color: #d2d2d25d;
+    height: auto;
+    background-color: #ffffffe9;
 }
 .f2 {
     width: 1000px;
@@ -192,50 +170,47 @@ body {
     border-radius: 15px;
     border: 0px solid black;
     position: relative;
-    top: 50px; 
+    top: 50px;
     left: 100px;
     display: block;
-    height: auto; 
-    padding: 10px;;
+    height: auto;
+    padding: 10px;
+    animation: slideDown 1s ease-out; 
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0;
 }
 
-.t1{
-    width:250px;
+.t1 {
+    width: 250px;
     margin-left: 200px;
     height: 80px;
     margin-top: 20px;
     position: absolute;
     font-size: 40px;
 }
-.sgstAmount
-{
-    margin-left:650px;
+.sgstAmount {
+    margin-left: 650px;
     margin-top: 50px;
 }
-.cgstAmount
-{
-    margin-left:650px;
+.cgstAmount {
+    margin-left: 650px;
     margin-top: 0px;
 }
-.cgstbox
-{
+.cgstbox {
     width: 200px;
     margin-left: 720px;
     margin-top: -40px;
 }
-.sgstbox
-{
+.sgstbox {
     width: 200px;
     margin-top: -45px;
     margin-left: 720px;
 }
-.totalAmount
-{
+.totalAmount {
     margin-top: 5px;
     margin-left: 645px;
 }
-.totalamountbox
-{
+.totalamountbox {
     width: 200px;
     margin-left: 720px;
     margin-top: -45px;
@@ -247,22 +222,19 @@ body {
 table.table1 {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 600px; 
+    margin-top: 600px;
 }
-
 table.table1 th,
 table.table1 td {
     border: 1px solid black;
     padding: 8px;
     text-align: center;
 }
-
 table.table1 .col-description {
-    width: 150px; 
+    width: 150px;
     background-color: black;
     color: #fff;
 }
-
 table.table1 .col-qty,
 table.table1 .col-rate,
 table.table1 .col-sgst,
@@ -270,196 +242,175 @@ table.table1 .col-cgst,
 table.table1 .col-cess,
 table.table1 .col-amount,
 table.table1 .col-action {
-    width: 80px; 
+    width: 80px;
     background-color: black;
     color: #fff;
 }
-
-.Notes
-{
-margin-top:50px;
-width:100%;
+.Notes {
+    margin-top: 50px;
+    width: 100%;
 }
-.Notescontent
-{
+.Notescontent {
     margin-top: 30px;
-    width:100%;
+    width: 100%;
 }
-.TandC
-{
-width:100%;
-margin-top: 20px;
+.TandC {
+    width: 100%;
+    margin-top: 20px;
 }
-.TandCcontent
-{
-    width:100%;
-margin-top: 20px;
+.TandCcontent {
+    width: 100%;
+    margin-top: 20px;
 }
-.btn-secondary
-{
+.btn-secondary {
     margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-    
-    .table1 {
-        margin-top: 550px; 
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
     }
-    .invoice,.invoicedate,.duedate
-    {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .table1 {
+        margin-top: 550px;
+    }
+    .invoice, .invoicedate, .duedate {
         margin-left: 30px;
     }
-    .invoicecontent,.duedatecontent,.invoicedcontent
-    {
+    .invoicecontent, .duedatecontent, .invoicedcontent {
         margin-left: 200px;
     }
 }
 
-
-@media (max-width:1024px) {
-    .f2{
+@media (max-width: 1024px) {
+    .f2 {
         width: 940px;
         margin-left: -100px;
     }
-    .upbox
-    {
+    .upbox {
         margin-left: -550px;
     }
-    .t1{
+    .t1 {
         margin-left: 250px;
     }
-    .btn-primary{
+    .btn-primary {
         margin-left: -450px;
         margin-top: 50px;
         position: absolute;
     }
-    .btn-secondary
-    {
+    .btn-secondary {
         margin-top: 20px;
     }
-    .r1,.r2,.r3,.r4
-{
-    width:180px;
-    border: none;
+    .r1, .r2, .r3, .r4 {
+        width: 180px;
+        border: none;
+    }
+    .cgstbox {
+        margin-left: 650px;
+    }
+    .sgstbox {
+        margin-left: 650px;
+    }
+    .totalamountbox {
+        margin-left: 650px;
+    }
+    .sgstAmount {
+        margin-left: 550px;
+    }
+    .cgstAmount {
+        margin-left: 550px;
+    }
+    .totalAmount {
+        margin-left: 550px;
+    }
 }
-.cgstbox{
-    margin-left: 650px;
-}
-.sgstbox{
-    margin-left: 650px;
-}
-.totalamountbox{
-    margin-left: 650px;
-}
-.sgstAmount
-{
-    margin-left: 550px;
-}
-.cgstAmount
-{
-    margin-left: 550px;
-}
-.totalAmount
-{
-    margin-left: 550px;
-}
-}
-@media (max-width:768px)
-{
-    .f2{
+
+@media (max-width: 768px) {
+    .f2 {
         margin-left: -100px;
         width: 700px;
     }
-    .t1
-    {
+    .t1 {
         margin-left: 100px;
     }
-    .upbox
-    {
+    .upbox {
         margin-left: -350px;
     }
-    .r1,.r2,.r3,.r4
-    {
-    border: none;
-    width: 130px;
+    .r1, .r2, .r3, .r4 {
+        border: none;
+        width: 130px;
     }
-    .table1
-    {
+    .table1 {
         margin-top: 550px;
     }
-    .btn-primary{
+    .btn-primary {
         margin-left: -300px;
         margin-top: 50px;
         position: absolute;
     }
-    .cgstbox{
+    .cgstbox {
         margin-left: 450px;
     }
-    .sgstbox{
+    .sgstbox {
         margin-left: 450px;
     }
-    .totalamountbox{
+    .totalamountbox {
         margin-left: 450px;
     }
-    .sgstAmount
-    {
+    .sgstAmount {
         margin-left: 350px;
     }
-    .cgstAmount
-    {
+    .cgstAmount {
         margin-left: 350px;
     }
-    .totalAmount
-    {
+    .totalAmount {
         margin-left: 350px;
     }
-    
 }
-@media (max-width:450px)
-{
-    .f2{
+
+@media (max-width: 450px) {
+    .f2 {
         margin-left: -100px;
         margin-top: 50px;
         width: 400px;
     }
-    .upbox{
-        margin-left:-50px;
+    .upbox {
+        margin-left: -50px;
     }
-    .t1
-    {
+    .t1 {
         margin-left: -50px;
         width: 100px;
-        height:50px;
+        height: 50px;
     }
-    
-    .invoice
-    {
-        margin-top:600px ;
+    .invoice {
+        margin-top: 600px;
         margin-left: -280px;
     }
-    .invoicecontent
-    {
-        margin-top:600px ;
+    .invoicecontent {
+        margin-top: 600px;
         margin-left: -120px;
     }
-    .invoicedate
-    {
-        margin-top:650px ;
+    .invoicedate {
+        margin-top: 650px;
         margin-left: -280px;
     }
-    .invoicedcontent
-    {
-        margin-top:650px ;
+    .invoicedcontent {
+        margin-top: 650px;
         margin-left: -120px;
     }
-    .duedate
-    {
-        margin-top:700px ;
+    .duedate {
+        margin-top: 700px;
         margin-left: -280px;
     }
-    .duedatecontent
-    {
-        margin-top:700px ;
+    .duedatecontent {
+        margin-top: 700px;
         margin-left: -120px;
     }
     table.table1 {
@@ -467,164 +418,141 @@ margin-top: 20px;
         margin-left: -10px;
         margin-top: 750px;
     }
-    th.col-description
-    {
-        width:50px;
+    th.col-description {
+        width: 50px;
     }
-    .cgstbox{
+    .cgstbox {
         margin-left: 225px;
-        width:120px ;
+        width: 120px;
         margin-top: -20px;
     }
-    .sgstbox{
+    .sgstbox {
         margin-left: 225px;
         margin-top: -25px;
-        width:120px
+        width: 120px;
     }
-    .totalamountbox{
+    .totalamountbox {
         margin-left: 225px;
-        width:120px;
+        width: 120px;
         margin-top: -25px;
     }
-    .sgstAmount
-    {
+    .sgstAmount {
         margin-left: 0px;
         margin-top: 50px;
     }
-    .cgstAmount
-    {
+    .cgstAmount {
         margin-left: 0px;
         margin-top: 0px;
     }
-    .totalAmount
-    {
+    .totalAmount {
         margin-left: -10px;
     }
-    .btn-primary
-    {
+    .btn-primary {
         margin-left: -190px;
     }
 }
-@media (max-width:400px)
-{
-    .f2{
+
+@media (max-width: 400px) {
+    .f2 {
         margin-left: -100px;
         margin-top: 50px;
         width: 350px;
     }
-    .upbox{
-        margin-left:-50px;
+    .upbox {
+        margin-left: -50px;
     }
-    .t1
-    {
+    .t1 {
         margin-left: -70px;
         width: 100px;
-        height:50px;
+        height: 50px;
     }
-    .r1,.r2,.r3,.r4
-    {
-    border: none;
-    width: 45px;
+    .r1, .r2, .r3, .r4 {
+        border: none;
+        width: 45px;
     }
-    table.table1
-    {
+    table.table1 {
         margin-top: 750px;
         width: 150px;
     }
-    .cgstbox{
+    .cgstbox {
         margin-left: 170px;
         margin-top: 0px;
     }
-    .sgstbox{
+    .sgstbox {
         margin-left: 170px;
         margin-top: 10px;
     }
-    .totalamountbox{
+    .totalamountbox {
         margin-left: 170px;
         margin-top: 10px;
     }
-    .sgstAmount
-    {
+    .sgstAmount {
         margin-left: 100px;
     }
-    .cgstAmount
-    {
+    .cgstAmount {
         margin-left: 100px;
     }
-    .totalAmount
-    {
+    .totalAmount {
         margin-left: 100px;
     }
-    .btn-primary
-    {
+    .btn-primary {
         margin-left: -140px;
     }
 }
-@media (max-width:350px)
-{
-    .f2{
+
+@media (max-width: 350px) {
+    .f2 {
         margin-left: -100px;
         margin-top: 50px;
         width: 300px;
     }
-    .upbox{
-        margin-left:-10px;
+    .upbox {
+        margin-left: -10px;
     }
-    .t1
-    {
+    .t1 {
         margin-top: -30px;
         margin-left: 60px;
         width: 70px;
-        height:50px;
+        height: 50px;
     }
-    .tcompany{
+    .tcompany {
         margin-left: -140px;
         margin-top: 120px;
-        width:200px;
+        width: 200px;
     }
-    .tname,.tcity,.tcompanyaddress,.tcompanygst,.tcountry,.tname,.tstate,.bill,.ccity,.caddress,.ccompany,.ccountry,.cgstt,.cstate
-    {
+    .tname, .tcity, .tcompanyaddress, .tcompanygst, .tcountry, .tname, .tstate, .bill, .ccity, .caddress, .ccompany, .ccountry, .cgstt, .cstate {
         width: 200px;
         margin-left: -140px;
     }
-    .invoice
-    {
+    .invoice {
         margin-left: -125px;
-        width:100px;
+        width: 100px;
     }
-    .invoicecontent
-    {
+    .invoicecontent {
         margin-left: 0px;
-        width:100px;
+        width: 100px;
     }
-    .invoicedate
-    {
+    .invoicedate {
         margin-left: -125px;
-        width:100px;
+        width: 100px;
     }
-    .invoicedcontent
-    {
+    .invoicedcontent {
         margin-left: 0px;
-        width:100px;
+        width: 100px;
     }
-    .duedate
-    {
+    .duedate {
         margin-left: -125px;
-        width:100px;
+        width: 100px;
     }
-    .duedatecontent
-    {
+    .duedatecontent {
         margin-left: 0px;
-        width:100px;
+        width: 100px;
     }
-    .r1,.r2,.r3,.r4
-    {
-    border: none;
-    width: 38px;
+    .r1, .r2, .r3, .r4 {
+        border: none;
+        width: 38px;
     }
-    .table1
-    {
+    .table1 {
         margin-top: 750px;
     }
 }
-
